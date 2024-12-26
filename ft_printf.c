@@ -6,7 +6,7 @@
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 15:54:05 by paulo             #+#    #+#             */
-/*   Updated: 2024/12/20 13:23:45 by paulo            ###   ########.fr       */
+/*   Updated: 2024/12/20 13:35:57 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	write_char_str_int(char c, va_list ap, int count_char)
 	else if (c == 's')
 	{
 		str = va_arg(ap, char *);
-		if (!va_arg(ap, char *))
+		if (!str)
 			str = "(null)";
 		ft_putstr_fd(str, 1);
 		count_char += ft_strlen(str) - 1;

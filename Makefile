@@ -5,14 +5,13 @@ CFLAGS = -Wall -Werror -Wextra -Ilibft
 AR = ar rcs
 RM = rm -f
 
-SRC = ft_printf.c
+SRC = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_puthex.c
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) libft/libft.a
-	@cp libft/libft.a $(NAME)
+$(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
 clean:
